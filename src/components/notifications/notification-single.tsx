@@ -8,7 +8,7 @@ import styles from '../../styles/Notification.module.css'
 import { Notification, removeNotificationAtom } from '../../utils/store';
 
 //* CONFIG IMPORTS
-const DELAY = parseInt(process.env.NOTIFICATION_RENDER_TIMING ? process.env.NOTIFICATION_RENDER_TIMING : '');
+const DELAY = parseInt(process.env.NOTIFICATION_RENDER_TIMING ? process.env.NOTIFICATION_RENDER_TIMING : '3500');
 
 const NotificationSingle: React.FC<{
   notification: Notification
