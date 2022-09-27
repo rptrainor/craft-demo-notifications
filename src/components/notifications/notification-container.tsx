@@ -18,9 +18,9 @@ const NotificationContainer: React.FC = () => {
   const [animationParent] = useAutoAnimate<HTMLDivElement>()
 
   return (
-    <div ref={animationParent} className={styles.notication_container}>
+    <div data-testid="notification-list" ref={animationParent} className={styles.notication_container}>
       {notifications.map((notification) => (
-        <NotificationSingle notification={notification} key={notification.id?.toString()} />
+        <NotificationSingle notification={notification} key={notification.id?.toString()}  />
       ))}
     </div>
   );

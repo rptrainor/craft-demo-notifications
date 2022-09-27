@@ -1,6 +1,9 @@
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 
+/// <reference types="vitest" />
+/// <reference types="vite/client" />
+
 export default defineConfig(({ mode }) => {
 
   const env = loadEnv(
@@ -22,6 +25,11 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
-    define: processEnvValues
+    define: processEnvValues,
+    test: {
+      globals: true,
+      environment: 'jsdom',
+      setupFiles: './src/setupTests.ts',
+    },
   }
 });
