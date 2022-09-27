@@ -1,18 +1,18 @@
 @font-face {
   font-family: "Red Hat Display";
-  src: url("../../public/fonts/RedHatDisplay-Regular.ttf");
+  src: url("/fonts/RedHatDisplay-Regular.ttf");
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
   font-family: "Red Hat Display";
-  src: url("../../public/fonts/RedHatDisplay-MediumItalic.ttf");
+  src: url("/fonts/RedHatDisplay-MediumItalic.ttf");
   font-style: italic;
   font-weight: 500;
 }
 @font-face {
   font-family: "Red Hat Display";
-  src: url("../../public/fonts/RedHatDisplay-Bold.ttf");
+  src: url("/fonts/RedHatDisplay-Bold.ttf");
   font-style: normal;
   font-weight: 700;
 }
