@@ -1,6 +1,8 @@
 import { NavLink } from 'react-router-dom';
-
 import type { ComponentPropsWithoutRef, FC } from 'react';
+
+//* COMPONENT IMPORTS
+import NotificationContainer from './notifications/notification-container';
 
 export const Layout: FC<ComponentPropsWithoutRef<'main'>> = ({ children }) => (
   <div className="layout">
@@ -15,5 +17,6 @@ export const Layout: FC<ComponentPropsWithoutRef<'main'>> = ({ children }) => (
     <footer className="p-4 border-t border-gray-200">
       Copyright &copy; 2022&ndash; OfColor, Inc.
     </footer>
+    <NotificationContainer />
   </div>
 );

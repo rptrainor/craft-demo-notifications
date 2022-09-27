@@ -1,7 +1,13 @@
-// delete this line and implement the "notify" funciton any way you like
-const notify = window.alert;
+import { useAtom } from 'jotai';
+
+import { addNotificationAtom, addErrorNotificationAtom } from '../utils/store'
 
 export default function Home() {
+  // HOOK THAT TRIGGERS A NOTIFICATION TO BE ADDED
+  const [_, addNotification] = useAtom(addNotificationAtom);
+  // HOOK THAT TRIGGERS AN ERROR NOTIFICATION TO BE ADDED
+  const [__, addErrorNotification] = useAtom(addErrorNotificationAtom);
+
   return (
     <div className="space-y-4">
       <p>
@@ -10,14 +16,14 @@ export default function Home() {
         produce more notifications!
       </p>
       <p>
-        <button onClick={() => notify('Notified!')}>Notify</button>
+        <button onClick={() => addNotification()}>Notify</button>
       </p>
       <p>
         And <em>this</em> should trigger an error notificaiton with
         the text &ldquo;Error&rdquo;that the user has to dismiss.
       </p>
       <p>
-        <button onClick={() => notify('Error')}>Trigger Error</button>
+        <button onClick={() => addErrorNotification()}>Trigger Error</button>
       </p>
     </div>
   );
